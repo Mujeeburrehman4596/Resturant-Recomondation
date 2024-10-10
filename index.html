@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Recommendation System</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center">Restaurant Recommendation System</h2>
+
+    <div class="card mt-4">
+      <div class="card-header bg-info text-white">
+        Enter Your Preferences
+      </div>
+      <div class="card-body">
+        <form id="restaurant-form">
+          <div class="form-group">
+            <label for="cuisine">Preferred Cuisine:</label>
+            <select class="form-control" id="cuisine" required>
+              <option value="italian">Italian</option>
+              <option value="chinese">Chinese</option>
+              <option value="pakistani">Pakistani</option>
+              <option value="mexican">Mexican</option>
+              <option value="japanese">Japanese</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Budget (in $):</label>
+            <select class="form-control" id="budget" required>
+              <option value="low">Low ($)</option>
+              <option value="medium">Medium ($$)</option>
+              <option value="high">High ($$$)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="rating">Minimum Rating:</label>
+            <select class="form-control" id="rating" required>
+              <option value="3">3 Stars</option>
+              <option value="4">4 Stars</option>
+              <option value="5">5 Stars</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-info btn-block">Get Restaurant Recommendation</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-header bg-success text-white">
+        Recommended Restaurant
+      </div>
+      <div class="card-body">
+        <h5 id="result-message" class="text-center">Fill out the form to get a recommendation</h5>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
